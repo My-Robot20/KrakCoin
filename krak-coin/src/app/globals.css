@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+
+/* Adding Custom Font Sofia Pro */
+
+@font-face {
+  font-family: 'Sofia-Pro-Light'; /* Replace with your font name */
+  src: url('/fonts/sofiapro-light-webfont.woff') format('woff'), /* Replace with your font file name */
+       url('/fonts/sofiapro-light.otf') format('opentype'); /* Replace with your font file name */
+  font-weight: normal; /* Or specify your desired weight */
+  font-style: normal; /* Or specify your desired style */
+}
+
+.Sofia-Pro {
+  font-family: 'Sofia-Pro-Light';
+  font-size: 20px;
+}
+
+
+@theme {
+  --color-krack-coin-button-bag: #614FFF;
+}
+

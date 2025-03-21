@@ -1,20 +1,21 @@
 // src/app/components/Button.tsx
 
 import React from 'react'
-import styles from '../styles/Button.module.css' // Correct relative import to styles folder
 
 interface ButtonProps {
   label: string
   onClick: () => void
-  color?: string
+  color?: string // Optional custom color prop for dynamic background
 }
 
 const Button: React.FC<ButtonProps> = ({ label, onClick, color }) => {
   return (
     <button
-      className={styles.button} // Apply the CSS module class
-      style={{ backgroundColor: color }} // Dynamic background color
       onClick={onClick}
+      className='py-2 px-4 text-white Sofia-Pro cursor-pointer rounded-lg hover:bg-opacity-80 transition-all duration-300'
+      style={{
+        backgroundColor: color || 'var(--color-krack-coin-button-bag)', // Use custom color or default to theme color
+      }}
     >
       {label}
     </button>
